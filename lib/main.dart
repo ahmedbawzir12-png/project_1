@@ -175,7 +175,7 @@ class MyApp extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "1- ",
+                          "1-Flutterr ",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
@@ -186,7 +186,7 @@ class MyApp extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "2- ",
+                          "2-Fairbase ",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,

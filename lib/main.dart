@@ -74,7 +74,7 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Developes",
+                      "Developers",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w600,

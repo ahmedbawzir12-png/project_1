@@ -132,7 +132,7 @@ class MyApp extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "1- ",
+                          "1- Easy Access ",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "2- ",
+                          "2- Unified Platform ",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
@@ -154,7 +154,8 @@ class MyApp extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "3- ",
+                          "3- Building Trust ",
+
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,

@@ -7,199 +7,151 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'KHADAMATY',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 1, 73, 109),
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 1, 60, 102),
-          title: Text(
-            "KHADAMATY",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.w500,
-            ),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.Khadamaty_color),
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const Color mainColor = Colors.Khadamaty_color;
+
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: mainColor,
+        title: const Text(
+          "KHADAMATY",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.w500,
           ),
         ),
-        body: Column(
+      ),
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Container(
-              color: const Color.fromARGB(255, 6, 79, 116),
-              width: double.infinity,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(10),
-                    child: CircleAvatar(
-                      radius: 60,
-                      //backgroundImage: AssetImage('lib/image/Ahmed2.jpg'),
+            const SizedBox(height: 25),
+
+            // ===== Logo and Slogan =====
+            Column(
+              children: [
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('images/Khadamaty_icon.jpg'),
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  Text(
-                    "To facilitate access ",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  Text(
-                    "to services in Yemen",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
                 ),
-              ),
-              height: 362,
-
-              child: Padding(
-                padding: const EdgeInsets.all(11.0),
-                child: Column(
-                  children: [
-                    Text(
-                      "Developers",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 22.3,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Ahmed Bawzir",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        Text(
-                          "Amer Bin Eshaq",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Ahmed AL-Johi",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        Text(
-                          " Saleh AL-Naqeeb",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Divider(color: Colors.white),
-                    Text(
-                      "Goals",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    Divider(color: Colors.black),
-                    Row(
-                      children: [
-                        Text(
-                          "1- Easy Access ",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "2- Unified Platform ",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "3- Building Trust ",
-
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Divider(color: Colors.white),
-                    Text(
-                      "Tools",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    Divider(color: Colors.black),
-                    Row(
-                      children: [
-                        Text(
-                          "1-Flutter ",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "2-Fairbase ",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                const SizedBox(height: 10),
+                const Text(
+                  "To facilitate access\nto services in Yemen",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-              ),
+              ],
             ),
+
+            const SizedBox(height: 30),
+
+            // ===== Developers Section =====
+            sectionTitle("Developers", mainColor),
+            const SizedBox(height: 10),
+            infoRow("Ahmed Bawzir", "Amer Bin Eshaq"),
+            const SizedBox(height: 5),
+            infoRow("Ahmed AL-Johi", "Saleh AL-Naqeeb"),
+
+            const SizedBox(height: 30),
+
+            // ===== Goals Section =====
+            sectionTitle("Goals", mainColor),
+            const SizedBox(height: 10),
+            infoText("1- Easy Access"),
+            infoText("2- Unified Platform"),
+            infoText("3- Building Trust"),
+
+            const SizedBox(height: 30),
+
+            // ===== Tools Section =====
+            sectionTitle("Tools", mainColor),
+            const SizedBox(height: 10),
+            infoText("1- Flutter"),
+            infoText("2- Firebase"),
+
+            const SizedBox(height: 40),
           ],
         ),
+      ),
+    );
+  }
+
+  static Widget sectionTitle(String title, Color color) {
+    return Container(
+      width: double.infinity,
+      alignment: Alignment.center,
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(15),
+      ),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      child: Text(
+        title,
+        style: TextStyle(
+          color: color,
+          fontSize: 22,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
+  }
+
+  static Widget infoRow(String left, String right) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(left, style: const TextStyle(fontWeight: FontWeight.w400)),
+          Text(right, style: const TextStyle(fontWeight: FontWeight.w400)),
+        ],
+      ),
+    );
+  }
+
+  static Widget infoText(String text) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 3),
+      child: Row(
+        children: [
+          Text(
+            text,
+            style: const TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ],
       ),
     );
   }

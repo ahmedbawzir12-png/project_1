@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'KHADAMATY',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.Khadamaty_color),
+       // colorScheme: ColorScheme.fromSeed(seedColor: Colors.Khadamaty_color),
       ),
       home: const MyHomePage(),
     );
@@ -25,81 +25,87 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color mainColor = Colors.Khadamaty_color;
+    
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: mainColor,
+        backgroundColor: const Color.fromARGB(255, 7, 134, 11),
         title: const Text(
           "KHADAMATY",
           style: TextStyle(
-            color: Colors.white,
+            color: Color.fromARGB(255, 246, 247, 246),
             fontSize: 25,
+            
             fontWeight: FontWeight.w500,
           ),
         ),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(height: 25),
-
-            // ===== Logo and Slogan =====
-            Column(
-              children: [
-                Container(
-                  width: 120,
-                  height: 120,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage('images/Khadamaty_icon.jpg'),
-                      fit: BoxFit.cover,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              const SizedBox(height: 25),
+          
+              // ===== Logo and Slogan =====
+              Column(
+                children: [
+                  Container(
+                    width: 120,
+                    height: 120,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage('images/Khadamaty_icon.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  "To facilitate access\nto services in Yemen",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                  const SizedBox(height: 10),
+                  const Text(
+                    "To facilitate access\nto services in Yemen",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 30),
-
-            // ===== Developers Section =====
-            sectionTitle("Developers", mainColor),
-            const SizedBox(height: 10),
-            infoRow("Ahmed Bawzir", "Amer Bin Eshaq"),
-            const SizedBox(height: 5),
-            infoRow("Ahmed AL-Johi", "Saleh AL-Naqeeb"),
-
-            const SizedBox(height: 30),
-
-            // ===== Goals Section =====
-            sectionTitle("Goals", mainColor),
-            const SizedBox(height: 10),
-            infoText("1- Easy Access"),
-            infoText("2- Unified Platform"),
-            infoText("3- Building Trust"),
-
-            const SizedBox(height: 30),
-
-            // ===== Tools Section =====
-            sectionTitle("Tools", mainColor),
-            const SizedBox(height: 10),
-            infoText("1- Flutter"),
-            infoText("2- Firebase"),
-
-            const SizedBox(height: 40),
-          ],
+                ],
+              ),
+          
+              const SizedBox(height: 30),
+          
+              // ===== Developers Section =====
+            sectionTitle("Developers", const Color.fromARGB(255, 1, 169, 46)),
+              const SizedBox(height: 10),
+              infoRow("Ahmed Bawzir", "Amer Bin Eshaq"),
+              const SizedBox(height: 5),
+              infoRow("Ahmed AL-Johi", "Saleh AL-Naqeeb"),
+          
+              const SizedBox(height: 30),
+          
+              // ===== Goals Section =====
+              sectionTitle("Goals", Colors.green),
+           
+           
+              const SizedBox(height: 10),
+              infoText("1- Easy Access"),
+              infoText("2- Unified Platform"),
+              infoText("3- Building Trust"),
+          
+              const SizedBox(height: 30),
+          
+              // ===== Tools Section =====
+             sectionTitle("Tools", Colors.green),
+              const SizedBox(height: 10),
+              infoText("1- Flutter"),
+              infoText("2- Firebase"),
+          
+              const SizedBox(height: 40),
+            ],
+          ),
         ),
       ),
     );
